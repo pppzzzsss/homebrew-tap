@@ -1,6 +1,6 @@
 cask "vibe-argus" do
   version "1.3.0"
-  sha256 "1bd180f345e1b41a208a9ac90a26336f3b33ed3158946dea794cead488d13922"
+  sha256 "fdfc54febb9b229d006e333e450d0e5a537bf9e0a89876faaf05e6c4bd3bcc15"
 
   url "https://github.com/pppzzzsss/homebrew-tap/releases/download/v#{version}/VibeArgus.dmg"
   name "Vibe Argus"
