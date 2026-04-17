@@ -14,9 +14,14 @@ cask "vibe-argus" do
   binary "#{appdir}/Vibe Argus.app/Contents/Helpers/vibe-argus", target: "vibe-argus"
 
   postflight do
-    system_command "#{staged_path}/Vibe Argus.app/Contents/Helpers/vibe-argus",
-                   args: ["install"]
+    set_permissions "#{appdir}/Vibe Argus.app/Contents/Helpers/vibe-argus", "0755"
+    set_permissions "#{appdir}/Vibe Argus.app/Contents/Helpers/vibe-argus-bridge", "0755"
   end
+
+  caveats <<~EOS
+    安装后请运行以下命令完成配置:
+      vibe-argus install
+  EOS
 
   uninstall quit: "com.vibeargus.app"
 
